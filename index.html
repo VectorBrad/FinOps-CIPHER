@@ -365,6 +365,67 @@
         }
         .cipher-sources a:hover { color: #6a6a6a; border-color: #ccc; }
 
+        /* ── Timeline ── */
+        .timeline-section {
+            max-width: 1200px;
+            margin: 0 auto 48px auto;
+            padding: 0 20px;
+        }
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+        }
+        .timeline-block {
+            background: #ffffff;
+            border: 1px solid #e8e6e2;
+            border-radius: 12px;
+            padding: 24px 24px 20px;
+            border-top: 3px solid;
+        }
+        .timeline-block.now { border-top-color: #c4645a; }
+        .timeline-block.near { border-top-color: #b08d57; }
+        .timeline-block.future { border-top-color: #6a9e8f; }
+        .timeline-block h4 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .timeline-block.now h4 { color: #c4645a; }
+        .timeline-block.near h4 { color: #b08d57; }
+        .timeline-block.future h4 { color: #6a9e8f; }
+        .timeline-block ul {
+            list-style: none;
+            padding: 0;
+        }
+        .timeline-block ul li {
+            font-size: 0.82rem;
+            color: #5a5a5a;
+            line-height: 1.6;
+            padding: 6px 0 6px 16px;
+            position: relative;
+            border-bottom: 1px solid #f5f3f0;
+        }
+        .timeline-block ul li:last-child { border-bottom: none; }
+        .timeline-block ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 14px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+        }
+        .timeline-block.now ul li::before { background: #c4645a; }
+        .timeline-block.near ul li::before { background: #b08d57; }
+        .timeline-block.future ul li::before { background: #6a9e8f; }
+
+        @media (max-width: 900px) {
+            .timeline-grid { grid-template-columns: 1fr; }
+        }
+
         /* ── Signal Flow ── */
         .flow-section {
             max-width: 1200px;
@@ -723,6 +784,46 @@
         <h3>The Convergent Signal</h3>
         <p>The FinOps Foundation defines the practice as maximizing the business value of technology. The recently updated mission statement isn't a signal that this shift is emerging, it's confirmation that it will arrive. As a FinOps Lead in an organization frantically adopting AI, I'm observing that FinOps is approaching the era where this definition needs to become our reality. FinOps teams that remain focused entirely on cost reduction will see their capabilities decomposed into agentic tools absorbed by adjacent functions. The teams that survive will do so with strong cultural roots across functions and lean into value intelligence.</p>
         <p style="margin-top: 16px;">Our path forward is not uncharted. The FinOps Framework and maturity model provide the structure for how teams navigate this transition. I believe FinOps Leads need to apply system thinking skills to connect costs to business outcomes across their organizations. Growing the capability to frame cloud costs not as line items but as expressions of value is the clearest signal for where FinOps teams must head.</p>
+    </div>
+
+    <!-- ── Signal Timeline ── -->
+
+    <div class="section-header">
+        <h2>Signal Timeline</h2>
+        <p>When the fringe becomes mainstream</p>
+    </div>
+
+    <div class="timeline-section">
+        <div class="timeline-grid">
+            <div class="timeline-block now">
+                <h4>Now — 2027</h4>
+                <ul>
+                    <li>Value narrative begins replacing cost savings as the primary FinOps deliverable.</li>
+                    <li>CI/CD cost gates move from fringe to early majority.</li>
+                    <li>AI coding assistants begin displacing single-purpose FinOps tools.</li>
+                    <li>FinOps Practitioners begin building pattern libraries and custom utilities.</li>
+                </ul>
+            </div>
+            <div class="timeline-block near">
+                <h4>2027 — 2029</h4>
+                <ul>
+                    <li>Pattern detection becomes standard engineering practice.</li>
+                    <li>Single-purpose FinOps tools largely gone.</li>
+                    <li>Unit economics becomes the expected language for expressing cloud value.</li>
+                    <li>Agentic interfaces are the primary way Practitioners and Finance Professionals access cost data.</li>
+                    <li>FinOps teams without a value narrative face organizational justification pressure.</li>
+                </ul>
+            </div>
+            <div class="timeline-block future">
+                <h4>2030+</h4>
+                <ul>
+                    <li>Cost is a first-class engineering quality metric embedded at design and deployment.</li>
+                    <li>Cloud value is communicated to the business through unit economics, not cost reports.</li>
+                    <li>FinOps teams that established cultural roots cross functionally are strategic and advisory.</li>
+                    <li>Agentic tools have absorbed the cost optimization functions that were not tied to value.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <!-- ── Signal Flow Map ── -->
